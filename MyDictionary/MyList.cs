@@ -9,6 +9,7 @@ namespace MyDictionary
         T[] myList;
         public MyList()
         {
+            //Ilklendirme
             myList = new T[0];
         }
         public void Add(T item)
