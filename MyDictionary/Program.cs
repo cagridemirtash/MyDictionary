@@ -11,9 +11,9 @@ namespace MyDictionary
             Product.Add("Ayakkabi");
             Product.Add("Canta");
 
-            MyList<string> myProduct = new MyList<string>();
-            myProduct.Add("Ayakkabi");
-            myProduct.Add("T-Shirt");
+            MyList<int,string> myProduct = new MyList<int,string>();
+            myProduct.Add(1,"Ayakkabi");
+            myProduct.Add(2,"T-Shirt");
             
             //Liste yazdirma bicimi value=key mantiginda
             foreach (var item in Product)

@@ -4,25 +4,31 @@ using System.Text;
 
 namespace MyDictionary
 {
-    class MyList<T>
+    class MyList<TKey,TValue>
     {
-        T[] myList;
+        TKey[] Keys;
+        TValue[] Values;
         public MyList()
         {
             //Ilklendirme
-            myList = new T[0];
+            Keys = new TKey[0];
+            Values = new TValue[0];
         }
-        public void Add(T item)
+        public void Add(TKey Key, TValue Value)
         {
-            T[] tempArray = myList;
-            myList = new T[myList.Length + 1 ];
+            TKey[] tempArrayKey = Keys;
+            TValue[] tempArrayValue = Values;
 
-            for (int i = 0; i < tempArray.Length; i++)
+            Keys = new TKey[Keys.Length + 1];
+            Values = new TValue[Values.Length + 1];
+
+            for (int i = 0; i <tempArrayKey.Length ; i++)
             {
-                myList[i] = tempArray[i];
+                Keys[i] = tempArrayKey[i];
+                Values[i] = tempArrayValue[i];
             }
-
-            myList[myList.Length - 1] = item;
+            Keys[Keys.Length - 1] = Key;
+            Values[Values.Length - 1] = Value;
         }
     }
 }
