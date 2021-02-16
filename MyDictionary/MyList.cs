@@ -29,6 +29,8 @@ namespace MyDictionary
             }
             Keys[Keys.Length - 1] = Key;
             Values[Values.Length - 1] = Value;
+
+            Console.WriteLine(Key + " " + Value + " Eklendi");
         }
     }
 }
